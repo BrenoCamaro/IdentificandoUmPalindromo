@@ -1,0 +1,53 @@
+Autor: Breno camarô Arraes
+Data: 25/07/2023
+
+1° - Etapa:
+    Escreva um porgrama que lê um inteiro de 5 dígitos e determine se ele é ou não um palíndromo;
+
+2° - Etapa:
+    Inicilizar as variáveis;
+    Imprimir a mensagem;
+    Inserir os dados;
+    Realizar as verificações;
+    Mostrar resultado;
+
+3° - Etapa:
+    Inicializar a variável numero como 0;
+    inicializar a variável numeroAoContrario como 0;
+    inicializar a variavel algarismoDeNumero como 0;
+    inicializar a variável contador como 1;
+    inicializar a variável auxiliar como 0;
+    
+    Imprima: Informe um valor inteiro de 5 dígitos: ;
+    Insira um inteiro de 5 dígitos ( 12345 ) -> Exemplo;
+
+    auxiliar = numero; ( 12345 )
+
+    Enquanto contador for menor ou igual a 5 
+
+        algarismoDeNumero = numero % 10; ( 5 -> contador = 1 )( 4 -> contador = 2 ) ( 3 -> contador = 3 ) ( 2 -> contador = 4 ) ( 1 -> contador = 4 )
+        
+        Se contador for igual a 1
+            numeroAoContrario = numeroAoContrario + algarismoDeNumero ( 5 ) * 10000; ( numeroAoContrario = 50000 );
+
+        Se contador for igual a 2
+            numeroAoContrario = numeroAoContrario + algarismoDeNumero ( 4 ) * 1000; ( numeroAoContrario = 50000 + 4000 = 54000 );
+
+        Se conatdor for igual a 3
+            numeroAoContrario = numeroAoContrario + algarismoDeNumero ( 3 ) * 100; ( numeroAoContrario = 50000 + 4000 + 300 = 54300 );
+
+        Se contador for igual a 4
+            numeroAoContrario = numeroAoContrario + algarismoDeNumero ( 2 ) * 10; ( numeroAoContrario = 50000 + 4000 + 300 + 20 = 54320);
+
+        Se contador for igual a 5
+            numeroAoContrario = numeroAoContrario + algarismoDeNumero ( 1 ) * 1; ( numeroAoContrario = 50000 + 4000 + 300 + 20 + 1 = 54321 )
+
+        numero = numero / 10; ( 1234 -> contador = 1) ( 123 -> contador = 2) ( 12 -> contador = 3) ( 2 -> contador = 4) ( 1 -> contador = 5 )
+
+        Adiciona 1 a contador;
+
+    numero = auxiliar; ( numero = 0 e auXiliar = 12345 )
+
+    Se a divisão de numero por numeroAoContrario for igual a 1 
+        imprima O valor informado e um palindromo!
+    Caso contrário imprima O valor informado NAO e um palindromo!
